@@ -16,8 +16,9 @@ Pré-requisitos para rodar localmente
 5. Configure a instância com o .env
 6. Execute o makemigrations
 7. Execute o migrate
-8. Execute os testes
-9. Coloque o projeto em execução
+8. Execute o collectstatic
+9. Execute os testes
+10. Coloque o projeto em execução
 
 ```console
 git clone https://github.com/carlos-moreno/zapay_challenge.git api
@@ -28,6 +29,7 @@ pip install -r requirements.txt
 cp contrib/env-sample .env
 python manage.py makemigrations
 python manage.py migrate
+python manage.py collectstatic
 python manage.py test
 python manage.py runserver
 ```
@@ -45,5 +47,13 @@ Pré-requisitos:
 docker-compose up
 ```
 
-###### Os Passos listados acima foram testados em máquina linux
+###### Os Passos listados acima foram testados em uma máquina com o sistema Linux Mint
+
+ - [Instação do git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
+ - [Instação do Python Linux](https://docs.python.org/3.7/using/unix.html)
+ - [Instação do Python Windows](https://docs.python.org/3.7/using/windows.html)
+ - [Docker](https://docs.docker.com/install/)
+ - [Docker-Compose](https://docs.docker.com/compose/install/)
+ 
+
 
