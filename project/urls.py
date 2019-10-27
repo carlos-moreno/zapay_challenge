@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from project.core.views import Launches
+
 
 urlpatterns = [
-    path('v1/', include('project.core.urls'), name="api"),
+    path('', Launches.as_view(), name="home"),
+    path('v1/', include('project.core.urls')),
 ]
