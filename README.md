@@ -49,11 +49,13 @@ docker-compose up
 
 ###### Os Passos listados acima foram testados em uma máquina com o sistema Linux Mint
 
- - [Instação do git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
- - [Instação do Python Linux](https://docs.python.org/3.7/using/unix.html)
- - [Instação do Python Windows](https://docs.python.org/3.7/using/windows.html)
- - [Docker](https://docs.docker.com/install/)
- - [Docker-Compose](https://docs.docker.com/compose/install/)
+#### Para instalação dos pré-requisitos veja:
+
+ - [Instalação do git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
+ - [Instalação do Python Linux](https://docs.python.org/3.7/using/unix.html)
+ - [Instalação do Python Windows](https://docs.python.org/3.7/using/windows.html)
+ - [Instalação do Docker](https://docs.docker.com/install/)
+ - [Instalação do Docker-Compose](https://docs.docker.com/compose/install/)
  
 
 
