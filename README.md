@@ -51,9 +51,9 @@ docker-compose up
 
 #### Para instalação dos pré-requisitos veja:
 
- - [Instalação do git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
- - [Instalação do Python Linux](https://docs.python.org/3.7/using/unix.html)
- - [Instalação do Python Windows](https://docs.python.org/3.7/using/windows.html)
+ - [Instalação do Git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
+ - [Instalação do Python no Linux](https://docs.python.org/3.7/using/unix.html)
+ - [Instalação do Python no Windows](https://docs.python.org/3.7/using/windows.html)
  - [Instalação do Docker](https://docs.docker.com/install/)
  - [Instalação do Docker-Compose](https://docs.docker.com/compose/install/)
  
