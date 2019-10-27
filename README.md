@@ -4,6 +4,11 @@ API para consumo de informações sobre lançamentos da SpaceX
 
 ## Rodando o projeto na sua máquina
 
+Pré-requisitos para rodar localmente
+
+ - Git
+ - Python 3
+ 
 1. Clone o repositório
 2. Crie um virtualenv com Python 3
 3. Ative o virtualenv
@@ -11,7 +16,6 @@ API para consumo de informações sobre lançamentos da SpaceX
 5. Configure a instância com o .env
 6. Execute os testes
 7. Coloque o projeto em execução
-
 
 ```console
 git clone https://github.com/carlos-moreno/zapay_challenge.git api
@@ -23,4 +27,19 @@ cp contrib/env-sample .env
 python manage.py test
 python manage.py runserver
 ```
+
+## Rodando o projeto usando Docker e Docker-Compose
+
+Pré-requisitos:
+
+ - Docker
+ - Docker-Compose
+ 
+1. docker-compose up
+
+```console
+docker-compose up
+```
+
+###### Os Passos listados acima foram testados em máquina linux
 
