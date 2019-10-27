@@ -14,8 +14,10 @@ Pré-requisitos para rodar localmente
 3. Ative o virtualenv
 4. Instale as dependências
 5. Configure a instância com o .env
-6. Execute os testes
-7. Coloque o projeto em execução
+6. Execute o makemigrations
+7. Execute o migrate
+8. Execute os testes
+9. Coloque o projeto em execução
 
 ```console
 git clone https://github.com/carlos-moreno/zapay_challenge.git api
@@ -24,6 +26,8 @@ python -m venv .api
 source .api/bin/activate
 pip install -r requirements.txt
 cp contrib/env-sample .env
+python manage.py makemigrations
+python manage.py migrate
 python manage.py test
 python manage.py runserver
 ```
