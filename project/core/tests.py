@@ -12,16 +12,6 @@ class HomeTest(TestCase):
         self.assertEqual(200, self.response.status_code)
 
 
-class EndPointApiTest(TestCase):
-
-    def setUp(self):
-        self.response = self.client.get("http://127.0.0.1:8000/v1")
-
-    def test_get(self):
-        """GET /v1 must return status code 200"""
-        self.assertEqual(200, self.response.status_code)
-
-
 class EndPointNextTest(TestCase):
 
     def setUp(self):

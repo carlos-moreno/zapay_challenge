@@ -5,7 +5,8 @@ WORKDIR /code
 COPY requirements.txt /code/
 RUN pip install -r requirements.txt
 COPY . /code/
-RUN cp contrib/env-sample .env
-RUN python manage.py makemigrations
-RUN python manage.py migrate
-RUN python manage.py collectstatic --no-input
+RUN cp contrib/env-sample .env \
+    && python manage.py makemigrations \
+    && python manage.py migrate \
+    && python manage.py collectstatic --no-input \
+    && python manage.py test
