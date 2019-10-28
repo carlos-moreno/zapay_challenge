@@ -3,7 +3,6 @@ from django.shortcuts import resolve_url as r
 
 
 class EndPointNextTest(TestCase):
-
     def setUp(self):
         self.response = self.client.get(r("next"))
 
@@ -13,7 +12,6 @@ class EndPointNextTest(TestCase):
 
 
 class EndPointUpcomingTest(TestCase):
-
     def setUp(self):
         self.response = self.client.get(r("upcoming"))
 
@@ -23,7 +21,6 @@ class EndPointUpcomingTest(TestCase):
 
 
 class EndPointLatestTest(TestCase):
-
     def setUp(self):
         self.response = self.client.get(r("latest"))
 
@@ -33,7 +30,6 @@ class EndPointLatestTest(TestCase):
 
 
 class EndPointPastTest(TestCase):
-
     def setUp(self):
         self.response = self.client.get(r("past"))
 

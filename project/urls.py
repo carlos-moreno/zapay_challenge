@@ -20,6 +20,6 @@ from project.core.views import Launches
 
 
 urlpatterns = [
-    path('', Launches.as_view(), name="home"),
-    path('v1/', include('project.core.urls')),
+    path("", Launches.as_view(), name="home"),
+    path("v1/", include("project.core.urls")),
 ]
