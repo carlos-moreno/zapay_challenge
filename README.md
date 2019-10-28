@@ -57,7 +57,7 @@ python manage.py test
 python manage.py runserver
 ```
 
-#####***Com a aplicação em execução, acesse 127.0.0.1:8000***
+##### ***Com a aplicação em execução, acesse 127.0.0.1:8000***
 
 ## Rodando o projeto usando Docker e Docker-Compose
 
@@ -74,7 +74,7 @@ python manage.py runserver
 docker-compose up
 ```
 
-#####***Com a aplicação em execução, acesse 127.0.0.1:8000***
+##### ***Com a aplicação em execução, acesse 127.0.0.1:8000***
 
 ###### Os Passos listados acima foram testados em uma máquina com o sistema Linux Mint
 
