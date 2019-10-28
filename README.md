@@ -8,10 +8,12 @@ API para consumo de informações sobre lançamentos da SpaceX
 
 ## Rodando o projeto na sua máquina
 
-Pré-requisitos para rodar localmente
+***Pré-requisitos para rodar localmente***
 
  - Git
  - Python 3
+ 
+***Passos a serem executados:***
  
 1. Clone o repositório
 2. Crie um virtualenv com Python 3
@@ -38,10 +40,12 @@ python manage.py runserver
 
 ## Rodando o projeto usando Docker e Docker-Compose
 
-Pré-requisitos:
+***Pré-requisitos:***
 
  - Docker
  - Docker-Compose
+ 
+***Passo a ser executado:***
  
 1. docker-compose up
 
@@ -51,7 +55,7 @@ docker-compose up
 
 ###### Os Passos listados acima foram testados em uma máquina com o sistema Linux Mint
 
-#### Para instalação dos pré-requisitos veja:
+#### ***Para a instalação dos pré-requisitos veja:***
 
  - [Instalação do Git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
  - [Instalação do Python no Linux](https://docs.python.org/3.7/using/unix.html)
