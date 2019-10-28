@@ -57,6 +57,8 @@ python manage.py test
 python manage.py runserver
 ```
 
+#####***Com a aplicação em execução, acesse 127.0.0.1:8000***
+
 ## Rodando o projeto usando Docker e Docker-Compose
 
 ***Pré-requisitos:***
@@ -66,11 +68,13 @@ python manage.py runserver
  
 ***Passo a ser executado:***
  
-1. docker-compose up
+1. No diretório do projeto, coloque o docker compose para subir o projeto
 
 ```console
 docker-compose up
 ```
+
+#####***Com a aplicação em execução, acesse 127.0.0.1:8000***
 
 ###### Os Passos listados acima foram testados em uma máquina com o sistema Linux Mint
 
