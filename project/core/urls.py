@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import Launches, NextLaunch, UpcomingLaunch, LatestLaunch, PastLaunch
+from .views import NextLaunch, UpcomingLaunch, LatestLaunch, PastLaunch
 
 urlpatterns = [
     path("next", NextLaunch.as_view(), name="next"),
