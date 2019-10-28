@@ -2,6 +2,10 @@
 
 API para consumo de informações sobre lançamentos da SpaceX
 
+[![Build Status](https://travis-ci.org/carlos-moreno/zapay_challenge.svg?branch=master)](https://travis-ci.org/carlos-moreno/zapay_challenge)
+[![Maintainability](https://api.codeclimate.com/v1/badges/44bd056d8e5e5a99b310/maintainability)](https://codeclimate.com/github/carlos-moreno/zapay_challenge/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/44bd056d8e5e5a99b310/test_coverage)](https://codeclimate.com/github/carlos-moreno/zapay_challenge/test_coverage)
+
 ## Rodando o projeto na sua máquina
 
 Pré-requisitos para rodar localmente
