@@ -68,7 +68,7 @@ python manage.py runserver
  
 ***Passo a ser executado:***
  
-1. No diretório do projeto, coloque o docker compose para subir o projeto
+1. No diretório do projeto, coloque o docker compose para subir a aplicação.
 
 ```console
 docker-compose up
