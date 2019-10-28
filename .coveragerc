@@ -1,2 +1,13 @@
 [run]
 source=project
+omit =
+    # omit __init__
+    *__init__.py*
+    # omit migrations
+    *migrations*
+    # omit staticfiles
+    *staticfiles*
+    # omit core/apps
+    core/apps.py
+    # omit wsgi.py
+    *wsgi.py*
