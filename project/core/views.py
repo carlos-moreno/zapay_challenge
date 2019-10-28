@@ -13,47 +13,34 @@ PAST = "past"
 class Launches(APIView):
     """
         Returns a list of SpaceX launches, scheduled and made.
-
-        Parameters that can be passed in querystring:
-            - flight_number
-            - launch_year
-            - launch_date_utc
-
-        For more parameter information and API details, see here:
-        [ref]: https://docs.spacexdata.com/?version=latest#5fc4c846-c373-43df-a10a-e9faf80a8b0a
     """
 
-    def get(self, request):
-        l = requests.get(API_URL)
-        return Response(l.json())
+    @staticmethod
+    def get(self):
+        launches = requests.get(API_URL)
+        return Response(launches.json())
 
 
 class NextLaunch(APIView):
     """
-        Returns information from the next launchec of SpaceX.
+        Returns information from the next launche of SpaceX.
     """
 
-    def get(self, request):
-        nl = requests.get("{}{}".format(API_URL, NEXT))
-        return Response(nl.json())
+    @staticmethod
+    def get(self):
+        next_l = requests.get("{}{}".format(API_URL, NEXT))
+        return Response(next_l.json())
 
 
 class UpcomingLaunch(APIView):
     """
         Returns information containing upcoming planned launches of SpaceX.
-
-        Parameters that can be passed in querystring:
-            - flight_number
-            - launch_year
-            - launch_date_utc
-
-        For more parameter information and API details, see here:
-        [ref]: https://docs.spacexdata.com/?version=latest#e001c501-9c09-4703-9e29-f91fbbf8db7c
     """
 
-    def get(self, request):
-        nl = requests.get("{}{}".format(API_URL, UPCOMING))
-        return Response(nl.json())
+    @staticmethod
+    def get(self):
+        upcoming = requests.get("{}{}".format(API_URL, UPCOMING))
+        return Response(upcoming.json())
 
 
 class LatestLaunch(APIView):
@@ -61,24 +48,18 @@ class LatestLaunch(APIView):
         Returns information from the latest SpaceX launche.
     """
 
-    def get(self, request):
-        nl = requests.get("{}{}".format(API_URL, LATEST))
-        return Response(nl.json())
+    @staticmethod
+    def get(self):
+        latest = requests.get("{}{}".format(API_URL, LATEST))
+        return Response(latest.json())
 
 
 class PastLaunch(APIView):
     """
         Returns information from the previous SpaceX launches.
-
-        Parameters that can be passed in querystring:
-            - flight_number
-            - launch_year
-            - launch_date_utc
-
-        For more parameter information and API details, see here:
-        [ref]: https://docs.spacexdata.com/?version=latest#fce450d6-e064-499a-b88d-34cc22991bcc
     """
 
-    def get(self, request):
-        nl = requests.get("{}{}".format(API_URL, PAST))
-        return Response(nl.json())
+    @staticmethod
+    def get(self):
+        past = requests.get("{}{}".format(API_URL, PAST))
+        return Response(past.json())
