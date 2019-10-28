@@ -12,8 +12,14 @@ PAST = "past"
 
 class Launches(APIView):
     """
-        Returns the list of all SpaceX releases, both those that have already happened and those that are scheduled to happen. [see here][ref].
+        Returns a list of SpaceX launches, scheduled and made.
 
+        Parameters that can be passed in querystring:
+            - flight_number
+            - launch_year
+            - launch_date_utc
+
+        For more parameter information and API details, see here:
         [ref]: https://docs.spacexdata.com/?version=latest#5fc4c846-c373-43df-a10a-e9faf80a8b0a
     """
 
@@ -24,9 +30,7 @@ class Launches(APIView):
 
 class NextLaunch(APIView):
     """
-        Return the next launch of SpaceX. [see here][ref].
-
-        [ref]: https://docs.spacexdata.com/?version=latest#c75a20cf-50e7-4a4a-8856-ee729e0d3868
+        Returns information from the next launchec of SpaceX.
     """
 
     def get(self, request):
@@ -36,8 +40,14 @@ class NextLaunch(APIView):
 
 class UpcomingLaunch(APIView):
     """
-        Return the upcoming launches of SpaceX. [see here][ref].
+        Returns information containing upcoming planned launches of SpaceX.
 
+        Parameters that can be passed in querystring:
+            - flight_number
+            - launch_year
+            - launch_date_utc
+
+        For more parameter information and API details, see here:
         [ref]: https://docs.spacexdata.com/?version=latest#e001c501-9c09-4703-9e29-f91fbbf8db7c
     """
 
@@ -48,9 +58,7 @@ class UpcomingLaunch(APIView):
 
 class LatestLaunch(APIView):
     """
-        Return the latest launch of SpaceX. [see here][ref].
-
-        [ref]: https://docs.spacexdata.com/?version=latest#07a29989-38e3-47fb-9f64-c132b5842ff0
+        Returns information from the latest SpaceX launche.
     """
 
     def get(self, request):
@@ -60,8 +68,14 @@ class LatestLaunch(APIView):
 
 class PastLaunch(APIView):
     """
-        Return the past launches of SpaceX. [see here][ref].
+        Returns information from the previous SpaceX launches.
 
+        Parameters that can be passed in querystring:
+            - flight_number
+            - launch_year
+            - launch_date_utc
+
+        For more parameter information and API details, see here:
         [ref]: https://docs.spacexdata.com/?version=latest#fce450d6-e064-499a-b88d-34cc22991bcc
     """
 
