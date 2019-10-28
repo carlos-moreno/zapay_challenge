@@ -8,6 +8,6 @@ omit =
     # omit staticfiles
     *staticfiles*
     # omit core/apps
-    core/apps.py
+    *apps.py*
     # omit wsgi.py
     *wsgi.py*
