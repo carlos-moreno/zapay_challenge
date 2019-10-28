@@ -21,6 +21,8 @@ O projeto busca seguir algumas recomendações da metodologia [doze-fatores](htt
  - Declaração de dependêcias
  - Configurações 
  
+Para integração contínua é utilizado o travis-ci, onde o mesmo roda os testes da aplicação, envia o relatório de cobertura de testes e qualidade do código para o code climate e por fim realiza o deploy no heroku. 
+ 
 Para ver o projeto em execução, [clique aqui!](https://carlos-moreno-spacex-api.herokuapp.com/)  
 
 ## Rodando o projeto na sua máquina
