@@ -1,6 +1,6 @@
 # Desafio Zapay
 
-API para consumo de informações sobre lançamentos da SpaceX
+API para consumo de informações sobre os lançamentos da SpaceX.
 
 [![Build Status](https://travis-ci.org/carlos-moreno/zapay_challenge.svg?branch=master)](https://travis-ci.org/carlos-moreno/zapay_challenge)
 [![Maintainability](https://api.codeclimate.com/v1/badges/44bd056d8e5e5a99b310/maintainability)](https://codeclimate.com/github/carlos-moreno/zapay_challenge/maintainability)
