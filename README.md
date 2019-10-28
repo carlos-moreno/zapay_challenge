@@ -8,7 +8,7 @@ API para consumo de informações sobre lançamentos da SpaceX
 
 ## Rodando o projeto na sua máquina
 
-***Pré-requisitos para rodar localmente***
+***Pré-requisitos:***
 
  - Git
  - Python 3
