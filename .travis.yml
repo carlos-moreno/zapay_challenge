@@ -1,0 +1,22 @@
+dist: xenial
+env:
+  global:
+  - secure: n33Afz55oMjY9bn7+3dyDPnRhumi/zkzBysfJLn/Ch6e7f4fDjR0KTZymTV+GtFrXaYPDJxKXuw8becIBIoRTGxnA50FNRgNjGLr/0kFBjMwIeQU1suh+9dKDdbtE8zHpW1udpl3QTDG5VBMOgPISLPQxtsQzqY6ROKCzN20D+qVoLceAirKAKtZ+rf9+OnpWK8ihHaQBj/3pKraKxq86cWzKNSgihUT9YH5IxxDXpBKjynFmU5hrwy3iSWYlrV77B/cpjaS7BtbO9+ukKf+EG7ANN2i9ZdYidABS2Jrzh4oOFgj97IgNOdrElPJgAwo6QeZvI3Dr70IUBiQRPzwPvl0uLLTzHIrpRFtcLy8aFMb1tHMFA2DvAvXktL65nisBvAoPadNU+vgfljByw3/PQpP0DvFIumeXEkBXSOJM8gOG8BH0UZNJMMshfxR3rkkWuK330WMHZVGMillVsaTta3QzZs7ajjPH7iYZMvAn1/AWjyDftkr9UNZTlGBgaYlB7efsteHG8+XbmTU3pboaY9QnRDWgLZ4P2IMbi/HQi0SuHkgmpvNk0+kTWZzNOioLt6tNtTvGFImk5frMM5XTVJByCfWU7789MoOAsVlIjrtFFhSNU1+A8oeCLLwj3ebsLOatCAgNtcZ3LYvtIS+aMLsGr7fl3YWN6XUGEsnbAI=
+language: python
+python:
+  - '3.7'
+install:
+  - cp contrib/env-sample .env
+  - pip install -r requirements.txt
+before_script:
+  - python manage.py migrate --noinput
+  - python manage.py collectstatic --noinput
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - coverage run manage.py test
+after_script:
+  - coverage xml
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
