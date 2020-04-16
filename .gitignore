@@ -90,6 +90,7 @@ ENV/
 env.bak/
 venv.bak/
 .zapay
+.zapay_challenge
 
 # Spyder project settings
 .spyderproject
