@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   zapay_db:
-    container_name: djhl_db
+    container_name: zapay_db
     image: postgres:12.3
     restart: always
     volumes:
