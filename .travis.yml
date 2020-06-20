@@ -9,7 +9,7 @@ install:
   - cp contrib/env-sample .env
   - pip install -r requirements.txt
 before_script:
-  - docker-compose up -f Docker-compose -d
+  - docker-compose -f Docker-compose up -d
   - python manage.py migrate
   - python manage.py collectstatic --noinput
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
