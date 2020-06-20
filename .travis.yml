@@ -1,25 +1,26 @@
 dist: xenial
 env:
   global:
-  - secure: U5SI50amkwC2PXAi9QX1Y0duQ6S0uYscYBOURBjYJpMBq15VOwHTLZNZ0PcVikAMUUq9NblwxIXxw5dnQTPVNJkbmG2hZnTPjYU9i9ftiFnTgmNcedUDy6v0GLZYpuhFmmkWe1MTGocBFMtFmBKToAJn8FCZdmw/am3CwT6c/U5CdoSr11gm8MHIoEIjJzksbm0MXAchNa/76mdhB/z52HmbR/CtwOsE5PT8JcfkxJhC0Ayi0ZvtGtGfUsFNQ3HOemdUAw3afifs5t2BGo6uH0cbyJ5oiw7lXZKCuO1mngy3ZRRx08jXV3HPYbDDrMGug/tiI9MwLOvbVNNCmlLBv5c5zrSRyBVS10QZCuS4kxaXn5hmcG8C3MLPMMhi+058c2YoMd+ahM8GYqbvBbuPvgSUd527Bw7pdCFiFYuj9zkghtjt9kj+Tx0MjBVMtAfzWnFf5SfiASVtzbwRweqJ2Ab3p4fCO93OqcTZjsgHuXP+LVKhSuqbv5VHZHXNyifusKiws9ZqQoengjazF60GAGSWxgmeD3as5w4WJpNxWs24a7WS0p9hnveO//Ev9GcLbM6zDOAUuKFgaGgHD0etUCd1g9aT+kMA6QfaaMsz/HlVI3j0Bka8Sxt9sgwPeIod5yDgP3Bm2oFwcyMZInbKLPYE80tHI9Y+BgazdfJIQTw=
+    - secure: U5SI50amkwC2PXAi9QX1Y0duQ6S0uYscYBOURBjYJpMBq15VOwHTLZNZ0PcVikAMUUq9NblwxIXxw5dnQTPVNJkbmG2hZnTPjYU9i9ftiFnTgmNcedUDy6v0GLZYpuhFmmkWe1MTGocBFMtFmBKToAJn8FCZdmw/am3CwT6c/U5CdoSr11gm8MHIoEIjJzksbm0MXAchNa/76mdhB/z52HmbR/CtwOsE5PT8JcfkxJhC0Ayi0ZvtGtGfUsFNQ3HOemdUAw3afifs5t2BGo6uH0cbyJ5oiw7lXZKCuO1mngy3ZRRx08jXV3HPYbDDrMGug/tiI9MwLOvbVNNCmlLBv5c5zrSRyBVS10QZCuS4kxaXn5hmcG8C3MLPMMhi+058c2YoMd+ahM8GYqbvBbuPvgSUd527Bw7pdCFiFYuj9zkghtjt9kj+Tx0MjBVMtAfzWnFf5SfiASVtzbwRweqJ2Ab3p4fCO93OqcTZjsgHuXP+LVKhSuqbv5VHZHXNyifusKiws9ZqQoengjazF60GAGSWxgmeD3as5w4WJpNxWs24a7WS0p9hnveO//Ev9GcLbM6zDOAUuKFgaGgHD0etUCd1g9aT+kMA6QfaaMsz/HlVI3j0Bka8Sxt9sgwPeIod5yDgP3Bm2oFwcyMZInbKLPYE80tHI9Y+BgazdfJIQTw=
 language: python
 python:
-- '3.7'
+  - '3.7'
 install:
-- cp contrib/env-sample .env
-- pip install -r requirements.txt
+  - cp contrib/env-sample .env
+  - pip install -r requirements.txt
 before_script:
-- python manage.py migrate --noinput
-- python manage.py collectstatic --noinput
-- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
-  > ./cc-test-reporter
-- chmod +x ./cc-test-reporter
-- "./cc-test-reporter before-build"
+  - docker-compose up -f Docker-compose -d
+  - python manage.py migrate
+  - python manage.py collectstatic --noinput
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - "./cc-test-reporter before-build"
 script:
-- coverage run manage.py test
+  - coverage run manage.py test
 after_script:
-- coverage xml
-- "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+  - coverage xml
+  - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
 deploy:
   provider: heroku
   api_key:

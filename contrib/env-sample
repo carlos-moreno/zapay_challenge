@@ -1,2 +1,3 @@
 SECRET_KEY=THIS_IS_SAMPLE
 ALLOWED_HOSTS=*
+DATABASE_URL=postgres://zapay:zapay@localhost:5433/zapay
